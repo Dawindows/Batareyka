@@ -6,17 +6,16 @@
 		"password": 1234,
     "isAdmin": true
 
-	}
-],
-
-"user":
-[
-  {
-    "login": "John",
-    "password": 1212,
-    "isAdmin": false
+	},
+ {
+    "login": "Sergey",
+    "password": 1234,
+    "isAdmin": true
+  },
+ {
+    "login": "Katya",
+    "password": 1234,
+    "isAdmin": true
   }
 ]
-
-
 }

@@ -8,11 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="assets/libs/fontawesome/all.css">
 </head>
 <body>
+
 <!-- User-menu -->
+
 <div id="user">
 	<div class="user-content">
 		<div class="close">	
-		<button class="button-close"></button>
+			<button class="button-close"></button>
 		</div>
 		<span class="text">Вход в личный кабинет</span>
 		<form class="input-user">
@@ -24,8 +26,35 @@
 			<button class="registration">Зарегистрироваться</button>
 		</div>
 	</div>
-
 </div>
+
+<!-- Basket -->
+	<div id="basket">
+		<div class="basket-content">
+			<div class="basket-title">
+				<span class="basket-name">Корзина</span>	
+				<button class="basket-close"></button>
+			</div>
+			<div class="basket-product">
+				В корзине пусто
+			</div>
+		</div>
+	</div>
+
+<!-- Favorite -->
+
+	<div id="favorite">
+		<div class="favorite-content">
+			<div class="favorite-title">
+				<span class="favorite-name">Список желаний</span>	
+				<button class="favorite-close"></button>
+			</div>
+			<div class="favorite-product">
+				Список желаний пуст
+			</div>
+		</div>
+	</div>
+
 	<!-- Header -->
 
 	<header>
@@ -50,38 +79,281 @@
 			</form>
 			<div class="icon">
 				<div class="icon-heart">
-					<a href="">
 						<i class="far fa-heart"></i>
 						<span class="icon-txt">Избранное</span>
-					</a>
 				</div>	
 				<div class="icon-basket">
-					<a href="">
 						<i class="fas fa-shopping-basket"></i>
 						<span class="icon-txt">Корзина</span>
-					</a>
 				</div>
 			</div>
 		</div>
 	</header>
 
 		<!-- Menu -->
+
 	<nav>
 		<ul class="menu">
    			<li class="catalog"><a href="#" >&#9776; Каталог товаров</a>
     			<ul class="drop-menu"> 
-	    			<li><a href="">Ноутбуки и компьютеры</a></li>
-					<li><a href="">Смартфоны</a></li>	
-					<li><a href="">Аксессуары</a></li>	
-					<li><a href="">Телевизоры</a></li>	
+	    			<li class="laptop">Ноутбуки</li>
+					<li class="phone">Смартфоны</li>	
+					<li class="accessories">Аксессуары</li>	
+					<li class="tv">Телевизоры</li>	
     			</ul> 
    			</li> 
 		</ul>
 	</nav>
 
-		<!-- Товары -->
-
+	<!-- content -->
+<main id="content">
+	<!-- advertising -->
+	<div class="holiday-img">
+		<img src="assets/img/image.jpg" alt="">
+	</div>
+	<div class="title">Лидеры продаж</div>
+	<div id="menu-top-product">
+		<button class="top-recommendations">Рекомендации</button>
+		<button class="top-new">Новинки</button>
+		<button class="top-sale">Распродажа</button>
+	</div>
+		
+		<!-- porduct -->
+	 
+	 <!-- recommendations -->
 	
+	<div id="recommendations-product">		
+		<span>Рекомендации</span>
+		<div id="recommendations-product-content">
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">801 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">300 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">9900 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">840 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>			
+			</div>
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">820 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/laptop-product/product.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">430 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+		</div>
+		<div id="#all-recommendations">
+			<button class="all-recommendations">показать ещё</button>
+		</div>
+	</div>
+
+
+	<!-- new -->
+
+	<div id="new-product">		
+		<span>Новинки</span>
+		<div id="new-product-content">
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">800 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">900 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">200 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+
+			</div>
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">100 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>			
+			</div>
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">500 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/phone.png" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">200 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+		</div>
+		<div id="all-new">
+			<button class="all-new">показать ещё</button>
+		</div>
+	</div>
+	
+	<!-- sale -->
+	
+	<div id="sale-product">		
+		<span>Распродажа</span>
+		<div id="sale-product-content">
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">300 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">400 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая шняга</span>
+				<span id="price">440 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+
+			</div>
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">2440 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>			
+			</div>
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">244 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+			<div class="product-content">
+				<img src="assets/img/battery.jpg" alt="">
+				<span id="product-title">Дорогая Шняга</span>
+				<span id="price">222 $</span>
+				<div class="menu-product">
+					<button class="button-basket">В корзину</button>
+					<div class="icon-favorite"><i class="far fa-heart"></i></div>
+				</div>
+			</div>
+		</div>
+		<div id="all-sale">
+			<button class="all-sale">показать ещё</button>
+		</div>
+	</div>
+</main>
+
+<!-- footer -->
+
+<footer>
+	<div class="footer-content">
+		 <ul class="web-icon"> 
+		 			<p>Мы в социальных сетях</p> 
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-telegram"></i></li>
+                </ul>
+		<div class="footer-menu">
+                <ul class="footer-1">
+                    <li class="footer-2">Больше информации</li>
+                    <li class="footer-3"><a href="">Правовая информация</a></li>
+                    <li class="footer-3"><a href="">Нвоости</a></li>
+                    <li class="footer-3"><a href="">Оплата</a></li>
+                </ul>
+                <ul class="footer-1">
+                    <li class="footer-2">Информация о нас</li>
+                    <li class="footer-3"><a href="">Вакансии</a></li>
+                    <li class="footer-3"><a href="">Контакты</a></li>
+                    <li class="footer-3"><a href="">О нас</a></li>
+                </ul>
+                <ul class="footer-1">
+                    <li class="footer-2">Помощь</li>
+                    <li class="footer-3"><a href="">Вопросы и ответы</a></li>
+                    <li class="footer-3"><a href="">Отследить заказ</a></li>
+                    <li class="footer-3"><a href="">Гарантия</a></li>
+                </ul>
+            </div>
+        </div>
+
+</footer>
+
 	<script src="src/script.js">	
 	</script>	
 </body>
