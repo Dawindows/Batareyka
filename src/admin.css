@@ -1,0 +1,124 @@
+body {
+	margin: 0;
+	font-size: 16px;
+}
+
+a {
+	display: contents;
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+input {
+	margin: 12px;
+	padding-right: 12px;
+	padding-left: 12px;
+	height: 24px;
+	background: #fff;
+	border: 1px solid;
+
+}
+
+.main-content {
+	display: none;
+}
+
+.menu-product li:hover {
+	opacity: 0.50;		
+}
+
+.admin-menu i {
+	display: flex;
+	flex-flow: column;
+	margin: 8px;
+	font-weight: 501;
+	cursor: pointer;
+}
+
+.admin-menu  img {
+	display: block;
+	width: 45px;
+	filter: invert();
+}
+
+.admin-menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	margin: 0;
+	padding: 4px;
+	line-height: 2;
+	font-size: 20px;
+	background: #292930;
+	color: #fff;
+}
+
+/* asasad */
+
+.add-product button {
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	background: gainsboro;
+}
+
+#post-content {
+	display: none;
+	justify-content: center;
+}
+
+.post-product {
+	position: absolute;
+	display: flex;
+	justify-content: end;
+	align-content: center;
+	flex-flow: column;
+	padding: 32px;
+	background: gainsboro;
+}
+
+#product-description {
+	height: 125px;
+}
+
+.button-post-product {
+	margin: 12px 0 0 0;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+.product-title {
+	margin: 8px;
+}
+
+
+.img-product {
+	height: 112px;
+	cursor: pointer;
+}
+
+.post-product-content {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+	margin-top: 24px;
+}
+
+.product-content {
+	display: grid;
+	justify-content: space-between;
+	align-items: center;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 20px;
+	border: 1px solid whitesmoke;
+}

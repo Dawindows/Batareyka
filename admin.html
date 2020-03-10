@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Admin management</title>
+    <link rel="stylesheet" href="src/admin.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/fontawesome/all.css">
+</head>
+
+<body>
+    <nav class="header">
+        <ul class="admin-menu">
+            <ul>
+                <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+            </ul>
+            <ul class="menu-product">
+                <i class="fas fa-shopping-bag">Товары</i>
+            </ul>
+            <ul>
+                <i class="fas fa-shopping-basket">Заказы</i>
+            </ul>
+            <ul class="add-product">
+                <i class="fas fa-plus-circle">Добавить товар</i>
+            </ul>
+        </ul>
+    </nav>
+
+    <div id="post-content">
+        <div class="post-product">
+            <span>Название товара:</span>
+            <input id="product-title" type="text">
+            <span>Фото:</span>
+            <input id="product-img" type="file" name="mURL">
+            <span>Стоимость:</span>
+            <input id="product-price" type="text">
+            <span>Описанние:</span>
+            <textarea id="product-description" name="comment"></textarea>
+            <div>
+                <button class="button-post-product">Добавить</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <div id="post-product-content">
+        </div>
+    </main>
+
+    <script src="src/admin.js"></script>
+</body>
+
+</html>

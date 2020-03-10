@@ -452,7 +452,7 @@ button:hover {
 }
 
 .product-content img {
-	width: 160px;
+	width: auto;
 	height: 112px;
 	margin: 12px auto;
 	cursor: pointer;
@@ -587,7 +587,7 @@ button:hover {
 	border: 1px dashed;
 }
 
-@media screen and (max-width: 1080px ){
+@media screen and (max-width: 1380px ){
 	.all-recommendations {
 	display: block;
 	}

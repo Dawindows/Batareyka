@@ -1,21 +1,74 @@
 {
-	"admin": 
-[
-	{
-		"login": "David",
-		"password": 1234,
-    "isAdmin": true
-
-	},
- {
-    "login": "Sergey",
-    "password": 1234,
-    "isAdmin": true
-  },
- {
-    "login": "Katya",
-    "password": 1234,
-    "isAdmin": true
-  }
-]
+  "admin": [
+    {
+      "login": "David",
+      "password": 1234,
+      "isAdmin": true,
+      "id": 1
+    },
+    {
+      "login": "Sergey",
+      "password": 1234,
+      "isAdmin": true,
+      "id": 2
+    },
+    {
+      "login": "Katya",
+      "password": 1234,
+      "isAdmin": true,
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "img": "assets/product/phone.png",
+      "title": "Смартфон Xiaomi",
+      "price": "25 $",
+      "id": 101
+    },
+    {
+      "img": "assets/product/battery.jpg",
+      "title": "Pawer bank",
+      "price": "300 $",
+      "id": 102
+    },
+    {
+      "img": "assets/product/phone.png",
+      "title": "Смартфон Apple",
+      "price": "1200 $",
+      "id": 103
+    },
+    {
+      "img": "assets/product/battery.jpg",
+      "title": "Pawer bank Xiaomi",
+      "price": "250 $",
+      "id": 104
+    },
+    {
+      "img": "assets/product/phone.png",
+      "title": "Смартфон Sumsung",
+      "price": "211 $",
+      "id": 105
+    },
+    {
+      "img": "assets/product/battery.jpg",
+      "title": "Pawer bank",
+      "price": "125 $",
+      "id": 106
+    },
+    {
+      "img": "assets/product/product.png",
+      "title": "Ноутбук Asus",
+      "price": "880 $ ",
+      "description": "Экран 15.6\" IPS (1920x1080) Full HD, матовый / Intel Core i5-8265U (1.6 - 3.9 ГГц)",
+      "id": 107
+    },
+    {
+      "img": "assets/product/phone.png",
+      "title": "Супер Смартфон",
+      "price": "323 $",
+      "description": "Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида \nПродавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида",
+      "id": 108
+    }
+  ]
 }
