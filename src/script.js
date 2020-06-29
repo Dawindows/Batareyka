@@ -5,11 +5,11 @@ let close = document.getElementsByClassName('button-close');
 for (i = 0; i < button.length; i++) 
 	button[i].onclick = function() {
 	contentUser.style.display="flex";
-}
+	}
 for (i = 0; i < close.length; i++) 
 	close[i].onclick = function close() {
 	contentUser.style.display="none";
-}
+	}
 
 //Admin
 async function getAdmin() {
@@ -75,63 +75,104 @@ let news = document.querySelector("#new-product-content");
 let sale = document.querySelector("#sale-product-content");
 	for (let key in content) {		 
 		recommendations.innerHTML += `
-			<div class="product-content"> 
+		<div id="product-content"> 
 			<img src="${content[key].img}" alt="" class="img-product">
-			<span id="product-title">${content[key].title}</span>
+			<span id="product-title" >${content[key].title}</span>
 		 	<span id="price">${content[key].price}</span> 
-			<div class="menu-product"> 
-		  	<button class="button-basket">В корзину</button> 
-		  	<div class="icon-favorite">
-		  	<i class="far fa-heart"></i>
-		 </div>
+		  		<div class="menu-product"> 
+		  			<button class="button-basket" data-id="${content[key].id}">В корзину</button>
+		  			<div class="icon-favorite">
+		  			<i class="far fa-heart"></i>
+				</div> 	
 		 </div> 
 		`
 		news.innerHTML += `
-			<div class="product-content">  
+		<div id="product-content"> 
 			<img src="${content[key].img}" alt="" class="img-product">
-			<span id="product-title">${content[key].title}</span>
+			<span id="product-title" >${content[key].title}</span>
 		 	<span id="price">${content[key].price}</span> 
-			<div class="menu-product"> 
-		  	<button class="button-basket">В корзину</button> 
-		  	<div class="icon-favorite">
-		  	<i class="far fa-heart"></i>
-		 </div>
+		  		<div class="menu-product"> 
+		  			<button class="button-basket" data-id="${content[key].id}">В корзину</button>
+		  			<div class="icon-favorite">
+		  			<i class="far fa-heart"></i>
+				</div> 	
 		 </div> 
-		` 
+		`
 		sale.innerHTML += `
-			<div class="product-content">  
+		<div id="product-content"> 
 			<img src="${content[key].img}" alt="" class="img-product">
-			<span id="product-title">${content[key].title}</span>
+			<span id="product-title" >${content[key].title}</span>
 		 	<span id="price">${content[key].price}</span> 
-			<div class="menu-product"> 
-		  	<button class="button-basket">В корзину</button> 
-		  	<div class="icon-favorite">
-		  	<i class="far fa-heart"></i>
-		 </div>
+		  		<div class="menu-product"> 
+		  			<button class="button-basket" data-id="${content[key].id}">В корзину</button>
+		  			<div class="icon-favorite">
+		  			<i class="far fa-heart"></i>
+				</div> 	
 		 </div> 
-		`   
+		`
 	}
 }
-
 getProduct();
 
-//Login to basket
-let basket = document.getElementById('basket');	
-let iconBasket = document.getElementsByClassName('icon-basket');
-let buttonClose = document.getElementsByClassName('basket-close');
-for (i = 0; i < iconBasket.length; i++) 
-	iconBasket[i].onclick = function() {
-	basket.style.display="flex";
+// Корзина
+async function putProductToBasket() { 
+	const response = await fetch ("http://localhost:3000/product");
+	const content = await response.json();
+	const buttonBasket = document.getElementsByClassName("button-basket"); // Кнопка в корзину
+		for (i = 0; i < buttonBasket.length; i++)
+			buttonBasket[i].onclick =  function() {
+				itemId = this.getAttribute('data-id'); //Узнать id продукта
+				setItem(); //Функция сохранения id продукта в localStorage
+				putProduct(); //Функция добавление товара в корзину
+			}
+		
+		function setItem() {
+			 localStorage.setItem("idProduct", JSON.stringify(itemId));
+		}
+
+		function getItem() {
+			return JSON.parse(localStorage.getItem("idProduct"));
+		}
+
+//Вход в корзину
+		const basket = document.getElementById('basket'); // Корзина
+		const iconBasket = document.getElementsByClassName('icon-basket'); // Конопка входа в Коризну
+		const basketProduct = document.getElementById("basket-product"); // содержимое  корзины
+			for (i = 0; i < iconBasket.length; i++) 
+				iconBasket[i].onclick =  function() {
+					basket.style.display=" flex";
+				}
+//Добавление продукта в Корзину
+		async function putProduct() {
+			const response = await fetch ("http://localhost:3000/product");
+    		const content = await response.json(); 
+    		let idItem = getItem(); //Получение Id товара
+				for (let key in content) {
+					if (idItem === `${content[key].id}`) { 
+						basketProduct.innerHTML += ` 
+							<div class="basket-product-content">
+								<img class="basket-img" src="${content[key].img}"></img>
+								<span class="basket-title">${content[key].title}</span>
+								<span class="basket-price">${content[key].price}</span>
+								<button class="basket-delete">Удалить</button>
+								<button class="basket-buy">Заказать</button>
+							</div>
+						` 
+					}
+				}	
+		}
+	
+putProduct() // Вызов функции для сохранения товара в корзине
+
+//Close basket
+		let buttonClose = document.getElementsByClassName('basket-close');
+			for (i = 0; i < buttonClose.length; i++) 
+				buttonClose[i].onclick = function() {
+				basket.style.display="none";
+				}		
+
 }
-
-for (i = 0; i < buttonClose.length; i++) 
-	buttonClose[i].onclick = function close() {
-	basket.style.display="none";
-}
-
-//Add product to basket
-
-
+putProductToBasket();
 
 
 

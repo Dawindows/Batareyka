@@ -326,17 +326,19 @@ li:hover {
 }
 
 .basket-content {
-	width: 500px;
 	background: #fff;
 }
 
-.basket-product {
+#basket-product {
 	display: flex;
+	height: 532px;
+	width: 516px;
+	overflow: scroll;
 	flex-flow: column;
-	background: #fff;
+	
 }
 
-.basket-title {
+.basket-header {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -356,6 +358,32 @@ li:hover {
 
 .basket-close:hover {
 	background: #903;
+}
+
+.basket-title {
+	font-size: 16px;
+}
+
+.basket-product-content {
+	display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    border: 1px solid whitesmoke;
+}
+
+.basket-delete,
+.basket-buy {
+	padding: 4px;
+	background: #00BC65;
+	border: inherit;
+	cursor: pointer;
+}
+
+.basket-img{
+	height: 92px
 }
 
 /* favorite*/
@@ -451,9 +479,9 @@ button:hover {
 	margin-bottom: 32px;
 }
 
-.product-content img {
+#product-content img {
 	width: auto;
-	height: 112px;
+	height: 100px;
 	margin: 12px auto;
 	cursor: pointer;
 }
@@ -467,7 +495,7 @@ button:hover {
 	overflow: hidden;
 }
 
-.product-content {
+#product-content {
 	display: inline-grid;
 	width: 168px;
 	height: 325px;
@@ -536,7 +564,7 @@ button:hover {
 }
 
 #new-product
-.product-content img {
+#product-content img {
 	width: auto;
 	height: 112px;
 	margin: 12px auto;
@@ -572,7 +600,7 @@ button:hover {
 }
 
 #sale-product
-.product-content img {
+#product-content img {
 	width: auto;
 	height: 112px;
 	margin: 12px auto;

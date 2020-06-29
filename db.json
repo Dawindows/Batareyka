@@ -21,54 +21,43 @@
   ],
   "product": [
     {
-      "img": "assets/product/phone.png",
-      "title": "Смартфон Xiaomi",
-      "price": "25 $",
-      "id": 101
-    },
-    {
-      "img": "assets/product/battery.jpg",
-      "title": "Pawer bank",
-      "price": "300 $",
-      "id": 102
-    },
-    {
-      "img": "assets/product/phone.png",
-      "title": "Смартфон Apple",
-      "price": "1200 $",
-      "id": 103
+      "img": "assets/product/product.png",
+      "title": "Notebook asus",
+      "price": "2000 $",
+      "description": "undefined",
+      "id": 1
     },
     {
       "img": "assets/product/battery.jpg",
       "title": "Pawer bank Xiaomi",
       "price": "250 $",
-      "id": 104
+      "id": 2
     },
     {
       "img": "assets/product/phone.png",
       "title": "Смартфон Sumsung",
       "price": "211 $",
-      "id": 105
+      "id": 3
     },
     {
       "img": "assets/product/battery.jpg",
       "title": "Pawer bank",
       "price": "125 $",
-      "id": 106
-    },
-    {
-      "img": "assets/product/product.png",
-      "title": "Ноутбук Asus",
-      "price": "880 $ ",
-      "description": "Экран 15.6\" IPS (1920x1080) Full HD, матовый / Intel Core i5-8265U (1.6 - 3.9 ГГц)",
-      "id": 107
+      "id": 4
     },
     {
       "img": "assets/product/phone.png",
       "title": "Супер Смартфон",
       "price": "323 $",
       "description": "Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида \nПродавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида",
-      "id": 108
+      "id": 5
+    },
+    {
+      "img": "assets/product/product.png",
+      "title": "Notebook",
+      "price": "2500 $",
+      "description": "Xiaomi notebook air 13.3",
+      "id": 6
     }
   ]
 }

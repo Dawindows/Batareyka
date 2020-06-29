@@ -74,6 +74,11 @@ input {
 	justify-content: center;
 }
 
+#change-content {
+	display: none;
+	justify-content: center;
+}
+
 .post-product {
 	position: absolute;
 	display: flex;
@@ -88,7 +93,19 @@ input {
 	height: 125px;
 }
 
+#change-description {
+	height: 125px;
+}
+
 .button-post-product {
+	margin: 12px 0 0 0;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+.button-put-product {
 	margin: 12px 0 0 0;
 	padding: 4px;
 	background: #fff;
@@ -121,4 +138,8 @@ input {
 	grid-template-columns: repeat(3, 1fr);
 	padding: 20px;
 	border: 1px solid whitesmoke;
+}
+
+.product-content button {
+	margin: 4px;
 }
