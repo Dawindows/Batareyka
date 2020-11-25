@@ -24,6 +24,15 @@ input {
 
 }
 
+select {
+	margin: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid;
+}
+
 .main-content {
 	display: none;
 }

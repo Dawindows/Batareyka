@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Batareyka</title>
-	<link rel="stylesheet" href="src/style.css">
+	<title>Интернет-магазин Technology</title>
+	<link rel="shortcut icon" href="assets/img/logo1.png" type="image/png">
+	<link rel="icon" type="image/png" sizes="512x512" href="assets/img/logo1.png">
+	<link rel="stylesheet" href="src/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/libs/fontawesome/all.css">
 </head>
 <body>
@@ -27,16 +29,65 @@
 		</div>
 	</div>
 </div>
+	<!-- Header -->
+
+	<header>
+		<div class="topnav"> 
+			<div >
+				<button class="user">Вход в личный кабинет 	</button>
+			</div>
+			<div>
+				(050)589-75-49 
+			</div>
+		</div>
+		<div class="header">
+			<div class="logo">
+				<a href="">
+					<div>
+						<img src="assets/img/logo.png" alt="">
+					</div>
+					<span class="logo-text">Technology</span>
+				</a>
+			</div>
+			<form class="find">
+				<input type="search" placeholder="Я ищу...">
+				<button class="button-find">Найти</button>
+			</form>
+			<div class="icon">
+				<div class="icon-heart">
+					<button>
+						<i class="far fa-heart"></i>
+						<span class="icon-txt">Избранное</span>
+					</button>
+				</div>	
+				<div id="icon-basket">
+					<button>
+						<i class="fas fa-shopping-basket"></i>
+						<span class="icon-txt">Корзина</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
 
 <!-- Basket -->
 	<div id="basket">
 		<div class="basket-content">
 			<div class="basket-header">
 				<span class="basket-name">Корзина</span>	
-				<button class="basket-close"></button>
+				<button id="basket-close"></button>
 			</div>
 			<div id="basket-product">
-	
+				
+			</div>
+			<div id="basket-info">
+
+				<div id="price-of-product">
+					<output id="outcome">Итог: 0 $</output>							
+				</div>
+				<div class="button-info-prise">
+					<button id="button-price-of-product">Оформить заказ</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -55,40 +106,6 @@
 		</div>
 	</div>
 
-	<!-- Header -->
-
-	<header>
-		<div class="topnav"> 
-			<div >
-				<button class="user">Вход в личный кабинет 	</button>
-			</div>
-			<div>
-				(050)589-75-49 
-			</div>
-		</div>
-		<div class="header">
-			<div class="logo">
-				<a href="">
-					<img src="assets/img/logo.png" alt="">
-					Batareyka
-				</a>
-			</div>
-			<form class="find">
-				<input type="text" placeholder="Я ищу...">
-				<button class="button-find">Найти</button>
-			</form>
-			<div class="icon">
-				<div class="icon-heart">
-						<i class="far fa-heart"></i>
-						<span class="icon-txt">Избранное</span>
-				</div>	
-				<div class="icon-basket">
-						<i class="fas fa-shopping-basket"></i>
-						<span class="icon-txt">Корзина</span>
-				</div>
-			</div>
-		</div>
-	</header>
 
 		<!-- Menu -->
 
@@ -96,24 +113,95 @@
 		<ul class="menu">
    			<li class="catalog"><a href="#" >&#9776; Каталог товаров</a>
     			<ul class="drop-menu"> 
-	    			<li class="laptop">Ноутбуки</li>
-					<li class="phone">Смартфоны</li>	
-					<li class="accessories">Аксессуары</li>	
-					<li class="tv">Телевизоры</li>	
+	    			<li id="notebook">Ноутбуки</li>
+					<li id="phone">Смартфоны</li>	
+					<li id="accessories">Аксессуары</li>	
+					<li id="tv">Телевизоры</li>	
     			</ul> 
    			</li> 
 		</ul>
 	</nav>
+<!-- Content-poduct -->
+<product id="product">
+	<div id="filter-product">
+		<p class="title-filter">Фильтр:</p>
+		<div class="filte-price filter">
+			<p>Цена: </p>
+			<div>
+				<input type="range" id="rmin" min="0" max="3000" value="0" oninput="minMaxPrice()">
+				от: 
+				<input type="text" id="tmin" value="0">	
+			</div>
+			<div>
+				<input type="range" id="rmax" min="0" max="3000" value="3000" oninput="minMaxPrice()">
+				до:
+				<input type="text" id="tmax" value="3000">	
+			</div>
+		</div>
+		<div class="filter-Manufacturer filter">
+			<p>Производитель: </p>
+			<ul>
+				<li><input type="checkbox">Xiaomi</input></li>
+				<li><input type="checkbox">Asus</input></li>
+				<li><input type="checkbox">Lenovo</input></li>
+			</ul>
+		</div>
+		<div class="filter-screen filter">
+			<p>Диагональ экрана: </p>
+			<ul>
+				<li><input type="checkbox">"13"</input></li>
+				<li><input type="checkbox">"13.3"</input></li>
+				<li><input type="checkbox">"14"</input></li>
+				<li><input type="checkbox">"15"</input></li>
+			</ul>
+		</div>
+		<div class="filter-Os filter">
+			<p>Операционная система: </p>
+			<ul>
+				<li><input type="checkbox">Windows</input></li>
+				<li><input type="checkbox">macOS</input></li>
+			</ul>
+		</div>
+	</div>
+	<div id="product-list">
+		<div id ="product-list-notebook"></div>
+		<div id ="product-list-phone"></div>
+		<div id ="product-list-accessories"></div>
+		<div id ="product-list-tv"></div>
 
-	<!-- content -->
+	</div>
+</product>
+	<!-- Content -->
 <main id="content">
 	<!-- advertising -->
-	<div class="holiday-img">
-		<img src="assets/img/image.jpg" alt="">
-	</div>
+	<div class="slider">
+		<div class="slider-arrow">
+			<a class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>	
+			<div class="holiday-img">
+				<img src="assets/img/image.jpg" alt="">	
+			</div>
+			<div class="holiday-img">	
+				<img src="assets/img/image1.jpg" alt="">
+			</div>
+			<div class="holiday-img">
+				<img src="assets/img/image2.jpg" alt="">
+			</div>
+			<div class="holiday-img">
+				<img src="assets/img/image3.jpg" alt="sd">
+			</div>
+			<a class="next arrow" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<div class="my-dot">
+         	<span class="dot" onclick="currentSlide(1)"></span>
+        	<span class="dot" onclick="currentSlide(2)"></span>
+        	<span class="dot" onclick="currentSlide(3)"></span>
+         	<span class="dot" onclick="currentSlide(4)"></span>
+      	</div>
+    </div>
+
 	<div class="title">Лидеры продаж</div>
 	<div id="menu-top-product">
-		<button class="top-recommendations">Рекомендации</button>
+		<button class="top-recommendations">Список товаров</button>
 		<button class="top-new">Новинки</button>
 		<button class="top-sale">Распродажа</button>
 	</div>
@@ -123,7 +211,7 @@
 	 <!-- recommendations -->
 	
 	<div id="recommendations-product">		
-		<span>Рекомендации</span>
+		<span>Список популярных товаров</span>
 		<div id="recommendations-product-content">
 		</div>
 		<div id="#all-recommendations">
@@ -189,8 +277,12 @@
         </div>
 
 </footer>
-
-	<script src="src/script.js">	
+	<script src="src/js/addhtml.js"></script>	
+	<script src="src/js/script.js"></script>	
+	<script src="src/js/basket.js"></script>
+	<script src="src/js/productlist.js"></script>	
+	<script src="src/js/desiresproduct.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 	</script>	
 </body>
 </html>

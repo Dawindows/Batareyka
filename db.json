@@ -17,47 +17,83 @@
       "password": 1234,
       "isAdmin": true,
       "id": 3
+    },
+    {
+      "login": "Vasya",
+      "password": "1234",
+      "id": 4
     }
   ],
   "product": [
     {
-      "img": "assets/product/product.png",
-      "title": "Notebook asus",
-      "price": "2000 $",
-      "description": "undefined",
-      "id": 1
-    },
-    {
-      "img": "assets/product/battery.jpg",
-      "title": "Pawer bank Xiaomi",
-      "price": "250 $",
+      "img": "assets/product/phone.png",
+      "title": "Iphone 7",
+      "price": "3440",
+      "description": "",
       "id": 2
     },
     {
       "img": "assets/product/phone.png",
-      "title": "Смартфон Sumsung",
-      "price": "211 $",
+      "title": "Xiaomi note 8t",
+      "price": "300",
+      "description": "Телефон!",
+      "date": "2020808",
+      "type": "Смартфон",
       "id": 3
     },
     {
       "img": "assets/product/battery.jpg",
-      "title": "Pawer bank",
-      "price": "125 $",
+      "title": "Power bank Lenovo",
+      "price": "60",
+      "description": "",
+      "date": "2020808",
+      "type": "Аксессуар",
       "id": 4
     },
     {
-      "img": "assets/product/phone.png",
-      "title": "Супер Смартфон",
-      "price": "323 $",
-      "description": "Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида Продавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида \nПродавец гарантирует упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида",
+      "img": "assets/product/battery.jpg",
+      "title": "Power bank Xiaomi",
+      "price": "50",
+      "description": "",
+      "date": "2020808",
+      "type": "Аксессуар",
       "id": 5
     },
     {
       "img": "assets/product/product.png",
-      "title": "Notebook",
-      "price": "2500 $",
-      "description": "Xiaomi notebook air 13.3",
+      "title": "Macbook",
+      "price": "2000",
+      "description": "",
+      "date": "2020806",
+      "type": "Ноутбук",
       "id": 6
+    },
+    {
+      "img": "assets/product/product.png",
+      "title": "Lenovo ",
+      "price": "898",
+      "description": "",
+      "date": "2020810",
+      "type": "Ноутбук",
+      "id": 7
+    },
+    {
+      "img": "assets/product/product.png",
+      "title": "TV",
+      "price": "444",
+      "description": "",
+      "date": "2020808",
+      "type": "Телевизор",
+      "id": 8
+    },
+    {
+      "img": "assets/product/product.png",
+      "title": "Notebook",
+      "price": "404",
+      "description": "dsad",
+      "date": "2020814",
+      "type": "Ноутбук",
+      "id": 9
     }
   ]
 }

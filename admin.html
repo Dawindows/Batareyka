@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Admin management</title>
-    <link rel="stylesheet" href="src/admin.css">
+    <link rel="stylesheet" href="src/css/admin.css">
     <link rel="stylesheet" type="text/css" href="assets/libs/fontawesome/all.css">
 </head>
 
@@ -32,20 +32,27 @@
     <div id="post-content">
         <div class="post-product">
             <span>Название товара:</span>
-            <input id="product-title" type="text">
+                <input id="product-title" type="text">
             <span>Фото:</span>
-            <input id="product-img" type="file" name="mURL">
+                <input id="product-img" type="file" name="mURL">
             <span>Стоимость:</span>
-            <input id="product-price" type="text">
+                <input id="product-price" type="text">
+            <span>Тип товара:</span>
+                <select id="select-product">
+                    <option value="Notebook">Ноутбук</option>
+                    <option value="Phone">Смартфон</option>
+                    <option value="Accessories">Аксессуар</option>
+                    <option value="Tv">Телевизор</option>
+                </select>
             <span>Описанние:</span>
-            <textarea id="product-description" name="comment"></textarea>
+                <textarea id="product-description" name="comment"></textarea>
             <div>
                 <button class="button-post-product">Добавить</button>
             </div>
         </div>
     </div>
 
-    <div id="change-content" style="display:none;">
+    <div id="change-content">
     </div>
 
 
@@ -54,7 +61,7 @@
         </div>
     </main>
 
-    <script src="src/admin.js"></script>
+    <script src="src/js/admin.js"></script>
 </body>
 
 </html>
